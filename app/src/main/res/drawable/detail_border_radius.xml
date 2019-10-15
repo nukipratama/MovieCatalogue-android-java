@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/activity_horizontal_margin" />
+    <solid android:color="#60222222"></solid>
+</shape>

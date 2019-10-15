@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/layout_const"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_item_photo_show"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:src="@color/colorAccent"
+                tools:text="@string/shows_img" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/layout_const"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_item_name_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="8dp"
+                android:layout_toEndOf="@id/layout_const"
+                android:layout_toRightOf="@id/layout_const"
+                android:layout_weight="4"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                tools:text="@string/movies_name" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_star_black_24dp"
+                android:drawableTint="@android:color/holo_orange_light"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textSize="13sp"
+                tools:text="@string/movies_desc" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_date_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head_layout"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@id/layout_const"
+            android:layout_toRightOf="@id/layout_const"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="@string/shows_date" />
+
+        <TextView
+            android:id="@+id/tv_item_desc_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_date_show"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_toEndOf="@id/layout_const"
+            android:layout_toRightOf="@id/layout_const"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textSize="12sp"
+            tools:text="@string/shows_desc" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_desc_show"
+            android:layout_toEndOf="@id/layout_const">
+
+            <Button
+                android:id="@+id/btn_fav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/button_design"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"
+                android:drawableTint="#000000"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/favorite"
+                android:textAlignment="textStart"
+                android:textColor="@drawable/button_design"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/button_design"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_right_black_24dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/more"
+                android:textAlignment="textEnd"
+                android:textColor="@drawable/button_design"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

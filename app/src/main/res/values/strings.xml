@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">GDK Movie Catalogue</string>
+    <string name="menu">Language</string>
+    <string name="more">More Info</string>
+    <string name="favorite">Add to Favorite</string>
+
+    <string name="favorite_action_title">Favorite</string>
+
+    <string name="search">Search Movies and TV Shows..</string>
+    <string name="searchQuery">Searching</string>
+    <string name="mvQuery">in Movies..</string>
+    <string name="shQuery">in TV Shows..</string>
+
+
+    <string name="title_movies">Movies</string>
+    <string name="title_shows">TV Shows</string>
+
+
+    <string name="movies_name">Movie Title</string>
+    <string name="movies_date">Release Date</string>
+    <string name="movies_desc">Movie Overview</string>
+    <string name="movies_img">Movie Poster</string>
+
+    <string name="shows_name">TV Show Title</string>
+    <string name="shows_date">Release Date</string>
+    <string name="shows_desc">TV Show Overview</string>
+    <string name="shows_img">TV Show Poster</string>
+
+    <string name="detail_name">Title</string>
+    <string name="detail_date">Release Date</string>
+    <string name="detail_desc">Overview</string>
+
+    <string name="widget_movie_tv">Favorite Film</string>
+    <string name="widget_show_tv">Favorite TV Show</string>
+    <string name="widget_refresh">Refresh</string>
+
+    <string name="reminder_action_title">Reminder</string>
+    <string name="release_title">Release Reminder</string>
+    <string name="release_desc">Release showing the movie that release today</string>
+    <string name="daily_title">Daily Reminder</string>
+    <string name="daily_desc">Reminder for return to app</string>
+
+    <string name="notif_daily_title">Movie Catalogue</string>
+    <string name="notif_daily_text">We already missing you, discover new movies and tv shows here..</string>
+    <string name="notif_daily_subtext">Daily Reminder</string>
+
+    <string name="notif_release_subtext">Release Reminder</string>
+
+</resources>

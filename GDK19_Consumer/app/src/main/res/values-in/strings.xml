@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Movie Consumer</string>
+    <string name="menu">Bahasa</string>
+    <string name="more">Tampilkan Info</string>
+    <string name="favorite">Tambahkan Favorit</string>
+
+    <string name="favorite_action_title">Favorit</string>
+
+    <string name="search">Cari Film dan Acara TV..</string>
+    <string name="searchQuery">Mencari</string>
+    <string name="mvQuery">di Film..</string>
+    <string name="shQuery">di Acara TV..</string>
+
+    <string name="title_movies">Film</string>
+    <string name="title_shows">Acara TV</string>
+
+
+    <string name="movies_name">Judul Film</string>
+    <string name="movies_date">Tanggal Rilis</string>
+    <string name="movies_desc">Deskripsi Film</string>
+    <string name="movies_img">Poster Film</string>
+
+    <string name="shows_name">Judul Acara TV</string>
+    <string name="shows_date">Tanggal Rilis</string>
+    <string name="shows_desc">Deskripsi Acara TV</string>
+    <string name="shows_img">Poster Acara TV</string>
+
+    <string name="detail_name">Judul</string>
+    <string name="detail_date">Tanggal Rilis</string>
+    <string name="detail_desc">Deskripsi</string>
+
+    <string name="widget_movie_tv">Film Favorit</string>
+    <string name="widget_show_tv">Acara TV Favorit</string>
+    <string name="widget_refresh">Refresh</string>
+
+    <string name="reminder_action_title">Pengingat</string>
+    <string name="release_title">Pengingat Rilis</string>
+    <string name="release_desc">Pengingat untuk film yang rilis hari ini</string>
+    <string name="daily_title">Pengingat Harian</string>
+    <string name="daily_desc">Pengingat untuk kembali ke aplikasi</string>
+
+    <string name="notif_daily_title">Katalog Film</string>
+    <string name="notif_daily_text">Kami merindukanmu, temukan film dan acara tv baru disini..</string>
+    <string name="notif_daily_subtext">Pengingat Harian</string>
+
+    <string name="notif_release_subtext">Pengingat Rilis</string>
+</resources>

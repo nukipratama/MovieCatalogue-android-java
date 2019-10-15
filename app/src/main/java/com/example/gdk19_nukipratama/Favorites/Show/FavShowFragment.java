@@ -1,0 +1,90 @@
+package com.example.gdk19_nukipratama.Favorites.Show;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ProgressBar;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
+
+import com.example.gdk19_nukipratama.DB.Show.ShowDB;
+import com.example.gdk19_nukipratama.DB.Show.ShowData;
+import com.example.gdk19_nukipratama.R;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class FavShowFragment extends Fragment {
+    private ShowDB db;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<ShowData> daftar;
+    private RecyclerView rvdaftar;
+    private ProgressBar progressBar;
+    private ArrayList savedRecyclerLayoutState;
+
+    public FavShowFragment() {
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        daftar = new ArrayList<>();
+        View view = inflater.inflate(R.layout.fragment_show, container, false);
+        db = Room.databaseBuilder(getActivity().getApplicationContext(),
+                ShowDB.class, "tb_show").allowMainThreadQueries().build();
+        rvdaftar = view.findViewById(R.id.rv_show);
+        progressBar = view.findViewById(R.id.progressBar);
+        layoutManager = new LinearLayoutManager(getActivity());
+        rvdaftar.setLayoutManager(layoutManager);
+        if (savedInstanceState == null) {
+            showLoading(true);
+            getDB();
+        } else {
+            savedRecyclerLayoutState = savedInstanceState.getParcelableArrayList("key");
+            daftar = savedRecyclerLayoutState;
+            rvdaftar.setAdapter(new ShowAdapter(daftar, getActivity().getApplicationContext()));
+        }
+
+
+        return view;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putParcelableArrayList("key", daftar);
+        super.onSaveInstanceState(outState);
+
+    }
+
+
+    private void getDB() {
+        new AsyncTask<Void, Void, ArrayList<ShowData>>() {
+            @Override
+            protected ArrayList<ShowData> doInBackground(Void... voids) {
+                daftar.addAll(Arrays.asList(db.showDAO().selectAllShows()));
+                return daftar;
+            }
+
+            @Override
+            protected void onPostExecute(ArrayList<ShowData> daftar) {
+                rvdaftar.setAdapter(new ShowAdapter(daftar, getActivity().getApplicationContext()));
+                showLoading(false);
+                rvdaftar.scheduleLayoutAnimation();
+            }
+        }.execute();
+    }
+
+    private void showLoading(Boolean state) {
+        if (state) {
+            progressBar.setVisibility(View.VISIBLE);
+        } else {
+            progressBar.setVisibility(View.GONE);
+        }
+    }
+}
