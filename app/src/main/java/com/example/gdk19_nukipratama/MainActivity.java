@@ -19,6 +19,10 @@ import com.example.gdk19_nukipratama.Movie.MovieFragment;
 import com.example.gdk19_nukipratama.Show.ShowFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -51,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             navView.setSelectedItemId(R.id.navigation_movie);
         }
+        
+        AppCenter.start(getApplication(), "7ff5a805-f246-4562-ae1c-b2da584cb7c1",
+                  Analytics.class, Crashes.class);
     }
 
     private void actionBar() {
